@@ -71,33 +71,33 @@ The library to use for state management or object observables, we can use Redux 
 For the network service, we can simply apply the native Fetch from React Native or Axios.\
 
 #### Structure of the app might look like this
-├── app/
-│   ├── components/
-│   │   ├── Button
-│   │   ├── Card
-│   │
-│   ├── pages/ (Page will use different modules from modules folder))
-│   │   ├── home/
-│   │   │   ├── HomeStyle.js
-│   │   │   ├── HomeView.js
-│   │   │   ├── HomeViewModel.js
-│   │   └── earn/
-│   │       ├── EarnStyle.js
-│   │       ├── EarnView.js
-│   │       ├── EarnViewModel.js
-│   │
-│   ├── modules/
-│   |   ├── function1/
-│   │   │   ├── FunctionView.js
-│   │   │   ├── FunctionStyle.js
-│   │   │   ├── FunctionViewModel.js
-│   │   │
-│   ├── models/ (Since in often case model will be commonly used across different viewmodel on different pages)
-│   |   ├── Model1.js
-│   |   ├── Model2.js
-│   │
-│   ├── services/
-│   │   ├── NetworkService.js
-│   │   └── StorageService.js
+├── app/\
+│   ├── components/\
+│   │   ├── Button\
+│   │   ├── Card\
+│   │\
+│   ├── pages/ (Page will use different modules from modules folder))\
+│   │   ├── home/\
+│   │   │   ├── HomeStyle.js\
+│   │   │   ├── HomeView.js\
+│   │   │   ├── HomeViewModel.js\
+│   │   └── earn/\
+│   │       ├── EarnStyle.js\
+│   │       ├── EarnView.js\
+│   │       ├── EarnViewModel.js\
+│   │\
+│   ├── modules/\
+│   |   ├── function1/\
+│   │   │   ├── FunctionView.js\
+│   │   │   ├── FunctionStyle.js\
+│   │   │   ├── FunctionViewModel.js\
+│   │   │\
+│   ├── models/ (Since in often case model will be commonly used across different viewmodel on different pages)\
+│   |   ├── Model1.js\
+│   |   ├── Model2.js\
+│   │\
+│   ├── services/\
+│   │   ├── NetworkService.js\
+│   │   └── StorageService.js\
 
 

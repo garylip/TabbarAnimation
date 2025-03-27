@@ -8,7 +8,7 @@ However, I am sorry that I am not able to fulfil every requirement. \
 The only difficulty for me is the animation in the middle of the tab bar, the U shape. \
 I beleive it can be done by an Svg Path animation, I spent quite some time to produce it, but it does not work. \
 \
-Regarding the design of the tab bar, I am able to make the tab bar design to the exact same referencing to this library (react-native-curved-bottom-bar) https://www.npmjs.com/package/react-native-curved-bottom-bar\
+Regarding the design of the tab bar, I am able to make the tab bar design to the exact same referencing to this library (react-native-curved-bottom-bar) https://www.npmjs.com/package/react-native-curved-bottom-bar
 \
 Eventually, I decided to make a simple tab indicator animation without the U shape in the middle which looks like this:
 

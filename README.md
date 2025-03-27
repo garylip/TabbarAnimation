@@ -1,50 +1,103 @@
-# Welcome to your Expo app 👋
+# Tab Bar Animation Challenge
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## Notes to the team
 
-## Get started
+First, thank you for giving me this challenge, it is an interesting task. \
+However, I am sorry that I am not able to fulfil every requirement. \
+\
+The only difficulty for me is the animation in the middle of the tab bar, the U shape. \
+I beleive it can be done by an Svg Path animation, I spent quite some time to produce it, but it does not work. \
+\
+Regarding the design of the tab bar, I am able to make the tab bar design to the exact same referencing to this library (react-native-curved-bottom-bar) https://www.npmjs.com/package/react-native-curved-bottom-bar\
+\
+Eventually, I decided to make a simple tab indicator animation without the U shape in the middle which looks like this:
 
-1. Install dependencies
+<video src="./Demo.mp4" width="320" height="400" controls></video>
+
+## How to run the project
+
+Since this project uses Expo, so the steps will be the following:
+
+1. Open terminal and get to the project directory
+
+   ```bash
+   cd TabbarAnimation
+   ```
+
+2. Install dependencies
 
    ```bash
    npm install
    ```
 
-2. Start the app
+3. Start the app
 
    ```bash
-    npx expo start
+   npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+3. Run the project on real device or iOS/Android simulator
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+   for Real device
+   ```
+   1. Download Expo Go app
+   2. Connect the network same as the computer
+   3. Open the Expo Go app
+   4. You should see the project that can be selected to run
+   ```
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+   for iOS
+   ```bash
+   i
+   ```
 
-## Get a fresh project
+   for Android
+   ```bash
+   a
+   ```
 
-When you're ready, run:
+## How will I design for an app with this tab bar
 
-```bash
-npm run reset-project
-```
+### Define Modules
+Before we implement the page content, we should first define the modules.\
+Modules should be created for every independent functionality or section of the app. It should not be tided to a page.\
+In this way, every module will be independent. It will be easy to maintain, sacle, test and reuse. 
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### Design
+I will choose MVVM for the architectural design, this is about how to structure the code, it separates the code into UI, business logic, services and models.\
 
-## Learn more
+The library to use for state management or object observables, we can use Redux or MobX.\
 
-To learn more about developing your project with Expo, look at the following resources:
+For the network service, we can simply apply the native Fetch from React Native or Axios.\
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+#### Structure of the app might look like this
+├── app/
+│   ├── components/
+│   │   ├── Button
+│   │   ├── Card
+│   │
+│   ├── pages/ (Page will use different modules from modules folder))
+│   │   ├── home/
+│   │   │   ├── HomeStyle.js
+│   │   │   ├── HomeView.js
+│   │   │   ├── HomeViewModel.js
+│   │   └── earn/
+│   │       ├── EarnStyle.js
+│   │       ├── EarnView.js
+│   │       ├── EarnViewModel.js
+│   │
+│   ├── modules/
+│   |   ├── function1/
+│   │   │   ├── FunctionView.js
+│   │   │   ├── FunctionStyle.js
+│   │   │   ├── FunctionViewModel.js
+│   │   │
+│   ├── models/ (Since in often case model will be commonly used across different viewmodel on different pages)
+│   |   ├── Model1.js
+│   |   ├── Model2.js
+│   │
+│   ├── services/
+│   │   ├── NetworkService.js
+│   │   └── StorageService.js
 
-## Join the community
 
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.

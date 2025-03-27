@@ -65,10 +65,8 @@ In this way, every module will be independent. It will be easy to maintain, sacl
 
 ### Design
 I will choose MVVM for the architectural design, this is about how to structure the code, it separates the code into UI, business logic, services and models.\
-
 The library to use for state management or object observables, we can use Redux or MobX.\
-
-For the network service, we can simply apply the native Fetch from React Native or Axios.\
+For the network service, we can simply apply the native Fetch from React Native or Axios.
 
 #### Structure of the app might look like this
 ├── app/\
